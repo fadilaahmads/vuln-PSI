@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2020 at 08:14 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Jun 23, 2020 at 11:19 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `psi`
+-- Database: `wisata`
 --
 
 -- --------------------------------------------------------
@@ -73,6 +73,30 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pendapatan`
+--
+
+CREATE TABLE `pendapatan` (
+  `id` int(8) NOT NULL,
+  `jenis` varchar(20) NOT NULL,
+  `periode` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pengunjung`
+--
+
+CREATE TABLE `pengunjung` (
+  `id` int(8) NOT NULL,
+  `jenis` varchar(20) NOT NULL,
+  `periode` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -115,6 +139,20 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `pendapatan`
+--
+ALTER TABLE `pendapatan`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `jenis` (`jenis`);
+
+--
+-- Indexes for table `pengunjung`
+--
+ALTER TABLE `pengunjung`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `jenis` (`jenis`);
 
 --
 -- Indexes for table `users`
