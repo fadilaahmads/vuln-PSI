@@ -8,14 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title></title>
+    <title>home</title>
+
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <!--styles-->
+    <style>
+    html, body {
+                font-family:'IBM Plex Sans', sans-serif;
+                background-color: #a6dcef;
+            }
+    </style>
   </head>
   <body>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
         <div class="container">
-        <a class="navbar-brand" href="#">SLEMAN TRIP</a>
+        <a class="navbar-brand" href="#">XploreJogja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +42,7 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container text-center">
-    <h1 class="display-4">SLEMAN TRIP</h1>
+    <h1 class="display-4">XploreJogja</h1>
     <p>Menyajikan data-data </p>
   </div>
 </div>
