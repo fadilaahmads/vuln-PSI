@@ -28,8 +28,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pendapatan', 'PendapatanController@index'); 
 
 
-//Dibawah Comment Ini Route Tentang Pencarian
-Route::get('/Pencarian', 'PencarianController@index'); 
+//Dibawah Comment Ini Route Tentang Pengeluaran
+Route::get('/pengeluaran', function(){
+    return view('Pengeluaran');
+}); 
 
 
 //Dibawah Comment Ini Route Tentang Pengunjung
