@@ -29,9 +29,7 @@ Route::get('/pendapatan', 'PendapatanController@index');
 
 
 //Dibawah Comment Ini Route Tentang Pengeluaran
-Route::get('/pengeluaran', function(){
-    return view('Pengeluaran');
-}); 
+Route::get('/pengeluaran', 'PengeluaranController@index'); 
 
 
 //Dibawah Comment Ini Route Tentang Pengunjung

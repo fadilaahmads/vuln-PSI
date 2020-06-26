@@ -16,7 +16,7 @@
         </tr>
     @foreach($pengeluaran as $p)
         <tr>
-            <td>$p->namaPengeluaran</td><td>$p->waktu</td><td>nominal</td>
+            <td>{{ $p->namaPengeluaran}}</td><td>{{ $p->waktu}}</td><td>{{ $p->nominal}}</td>
         </tr>
     @endforeach
 
