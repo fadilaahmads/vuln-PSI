@@ -23,8 +23,16 @@ Route::get('/abc', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/pendapatan', 'PendapatanController@index'); //pendapatan 
-Route::get('/Pencarian', 'PencarianController@index'); //pencarian
-Route::get('/pengunjung', 'PengunjungController@index'); //pengunjung
+
+//Dibawah Comment Ini Route Tentang Pendapatan
+Route::get('/pendapatan', 'PendapatanController@index'); 
+
+
+//Dibawah Comment Ini Route Tentang Pencarian
+Route::get('/Pencarian', 'PencarianController@index'); 
+
+
+//Dibawah Comment Ini Route Tentang Pengunjung
+Route::get('/pengunjung', 'PengunjungController@index'); 
 
 
