@@ -24,5 +24,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pendapatan', 'PendapatanController@index'); //pendapatan 
+Route::get('/Pencarian', 'PencarianController@index'); //pencarian
+Route::get('/pengunjung', 'PengunjungController@index'); //pengunjung
 
 
