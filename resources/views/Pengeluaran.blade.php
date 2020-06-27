@@ -1,27 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-	<title>Tutorial Laravel #20 : Eloquent Laravel</title>
-</head>
-<body>
- 
-<h1>Data Pegawai</h1>
-<h3>www.malasngoding.com</h3>
- 
-
-
-<table>
-        <tr>
-            <th>Nama Pengeluaran</th><th>Waktu</th><th>Nominal</th>
-        </tr>
-    @foreach($pengeluaran as $p)
-        <tr>
-            <td>{{ $p->namaPengeluaran}}</td><td>{{ $p->waktu}}</td><td>{{ $p->nominal}}</td>
-        </tr>
-    @endforeach
-
-    </table>
-	
- 
-</body>
+    <body>
+        <h1>Data Pengeluaran</h1>
+        <ul>
+            <li>Max :.{{ $max}}</li>
+            <li>Min :.{{ $min}}</li>
+            <li>Avg :.{{ $avg}}</li>
+            <li>Total :.{{ $total}}</li>
+        </ul>
+    </body>
 </html>
