@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
+            <a class="nav-item nav-link" href="{{ route('pendapatan') }}">Pendapatan</a>
             <a class="nav-item nav-link" href="#">Pengeluaran</a>
             <a class="nav-item nav-link" href="#">Pengunjung</a>
           </div>
@@ -89,7 +89,7 @@
       <div class="card-body">
         <h5 class="card-title">PENDAPATAN</h5>
         <p class="card-text">Menampilkan data banyaknya pendapatan tempat wisata </p>
-        <a href="#" class="btn btn-primary">Go</a>
+        <a href="{{ route('grafik') }}" class="btn btn-primary">Go</a>
       </div>
     </div>
   </div>

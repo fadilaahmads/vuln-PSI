@@ -10,7 +10,9 @@ class PendapatanController extends Controller
 { 
     public function index()
     {
-        $pendapatan = DB::table('pendapatan')->get();
-        return view('index', ['pendapatan' => $pendapatan]);
+       //$pendapatan = DB::table('pendapatan')->get();
+       $pendapatan=Pendapatan::all();
+       return view('index', ['pendapatan' => $pendapatan]);
+       //return response()->json(["data"=>$pendapatan]);
     }
 }
