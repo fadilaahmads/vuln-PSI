@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Tutorial Laravel #20 : Eloquent Laravel</title>
+	<title>Pengeluaran</title>
 </head>
 <body>
  
-<h1>Data Pegawai</h1>
-<h3>www.malasngoding.com</h3>
+<h1>Data Pengeluaran</h1>
+
  
 
 
