@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Jun 2020 pada 13.28
+-- Waktu pembuatan: 29 Jun 2020 pada 17.24
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -54,10 +54,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(1, '2014_10_12_000000_create_users_table', 1),
-(2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2020_06_26_112016_create_pengeluaran_table', 2);
+(4, '2020_06_26_112016_create_pengeluaran_table', 2),
+(12, '2014_10_12_000000_create_users_table', 3),
+(13, '2014_10_12_100000_create_password_resets_table', 3),
+(14, '2019_08_19_000000_create_failed_jobs_table', 3),
+(15, '2020_06_29_143852_create_pengeluaran_table', 3);
 
 -- --------------------------------------------------------
 
@@ -79,8 +80,10 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `pendapatan` (
   `id` int(8) NOT NULL,
-  `jenis` varchar(20) NOT NULL,
-  `periode` date DEFAULT NULL
+  `nama_kegiatan` text NOT NULL,
+  `tanggal` int(11) DEFAULT NULL,
+  `bulan` int(11) NOT NULL,
+  `tahun` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -91,9 +94,10 @@ CREATE TABLE `pendapatan` (
 
 CREATE TABLE `pengeluaran` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `namaPengeluaran` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `waktu` date NOT NULL,
-  `nominal` int(11) NOT NULL,
+  `nama_kegiatan` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tanggal` int(11) NOT NULL,
+  `bulan` int(11) NOT NULL,
+  `tahun` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -128,13 +132,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$cZE1m6auGHDaXBrEF/4bYe1WlCBpQKk74.NEYtO7glv9vUrZC7kGi', NULL, '2020-06-22 07:52:47', '2020-06-22 07:52:47');
-
---
 -- Indexes for dumped tables
 --
 
@@ -161,7 +158,7 @@ ALTER TABLE `password_resets`
 --
 ALTER TABLE `pendapatan`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `jenis` (`jenis`);
+  ADD UNIQUE KEY `jenis` (`nama_kegiatan`) USING HASH;
 
 --
 -- Indeks untuk tabel `pengeluaran`
@@ -197,7 +194,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengeluaran`
@@ -209,7 +206,7 @@ ALTER TABLE `pengeluaran`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
