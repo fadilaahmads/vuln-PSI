@@ -32,7 +32,7 @@
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="#">Pendapatan</a>
-            <a class="nav-item nav-link" href="#">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
             <a class="nav-item nav-link" href="#">Pengunjung</a>
           </div>
         </div>
@@ -98,7 +98,7 @@
       <div class="card-body">
         <h5 class="card-title">PENGELUARAN</h5>
         <p class="card-text">Menampilkan data banyaknya pengeluaran tempat wisata </p>
-        <a href="#" class="btn btn-primary">Go</a>
+        <a href="/pengeluaran" class="btn btn-primary">Go</a>
       </div>
     </div>
   </div>

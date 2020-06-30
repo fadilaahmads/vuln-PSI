@@ -99,7 +99,7 @@
         type: 'column'
     },
     title: {
-        text: 'Total Pengeluaran perbulan'
+        text: 'Pengeluaran Terendah per Bulan'
     },
     subtitle: {
         text: ''
@@ -124,7 +124,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Total'
+            text: 'Terendah'
         }
     },
     tooltip: {
@@ -142,22 +142,22 @@
         }
     },
     series: [{
-        name: 'Pengeluaran',
+        name: 'Terendah',
         data: [
-          {{$totalJanuary}}, 
-          {{$totalFebruary}}, 
-          {{$totalMarch}}, 
-          {{$totalApril}}, 
-          {{$totalMay}}, 
-          {{$totalJune}}, 
-          {{$totalJuly}}, 
-          {{$totalAugust}}, 
-          {{$totalSeptember}}, 
-          {{$totalOctober}}, 
-          {{$totalNovember}}, 
-          {{$totalDecember}}]
+          {{$terendahJanuary}}, 
+          {{$terendahFebruary}}, 
+          {{$terendahMarch}}, 
+          {{$terendahApril}}, 
+          {{$terendahMay}}, 
+          {{$terendahJune}}, 
+          {{$terendahJuly}}, 
+          {{$terendahAugust}}, 
+          {{$terendahSeptember}}, 
+          {{$terendahOctober}}, 
+          {{$terendahNovember}}, 
+          {{$terendahDecember}}]
+
     }]
-    
 });
     </script>
     <br>
@@ -166,26 +166,52 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Total</a>
+          <a class="nav-link" href="/pengeluaran">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link" href="/pengeluaran/ratarata">Rata-Rata</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/terendah">Terendah</a>
+          <a class="nav-link active" href="/pengeluaran/terendah">Terendah</a>
         </li>
       </ul>
     </div>
     <div class="card-body">
       <div class="form-group row">
-        <div class="col-3">
-          <p>Total Tahun ini : </p>
+        <div class="col-3 text-left">
+          <p>Terendah per Tahun : </p>
+          <hr>
+          <p>Terendah Bulan Januari : </p>
+          <p>Terendah Bulan Februari: </p>
+          <p>Terendah Bulan Maret: </p>
+          <p>Terendah Bulan April: </p>
+          <p>Terendah Bulan Mei: </p>
+          <p>Terendah Bulan Juni: </p>
+          <p>Terendah Bulan Juli: </p>
+          <p>Terendah Bulan Agustus: </p>
+          <p>Terendah Bulan September: </p>
+          <p>Terendah Bulan Oktober: </p>
+          <p>Terendah Bulan November: </p>
+          <p>Terendah Bulan Desember: </p>
         </div>
         <div class="col-3">
-          <p>Rp {{$totalTahun}}</p>
+          <p>Rp {{$terendahTahun}}</p>
+          <hr>
+          <p>Rp {{$terendahJanuary}}</p>
+          <p>Rp {{$terendahFebruary}}</p>
+          <p>Rp {{$terendahMarch}}</p>
+          <p>Rp {{$terendahApril}}</p>
+          <p>Rp {{$terendahMay}}</p>
+          <p>Rp {{$terendahJune}}</p>
+          <p>Rp {{$terendahJuly}}</p>
+          <p>Rp {{$terendahAugust}}</p>
+          <p>Rp {{$terendahSeptember}}</p>
+          <p>Rp {{$terendahOctober}}</p>
+          <p>Rp {{$terendahNovember}}</p>
+          <p>Rp {{$terendahDecember}}</p>
         </div>
       </div>
     </div>

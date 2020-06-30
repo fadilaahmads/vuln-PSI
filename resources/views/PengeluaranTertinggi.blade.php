@@ -99,7 +99,7 @@
         type: 'column'
     },
     title: {
-        text: 'Total Pengeluaran perbulan'
+        text: 'Pengeluaran Tertinggi Perbulan'
     },
     subtitle: {
         text: ''
@@ -124,7 +124,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Total'
+            text: 'Tertinggi'
         }
     },
     tooltip: {
@@ -142,22 +142,22 @@
         }
     },
     series: [{
-        name: 'Pengeluaran',
+        name: 'Tertinggi',
         data: [
-          {{$totalJanuary}}, 
-          {{$totalFebruary}}, 
-          {{$totalMarch}}, 
-          {{$totalApril}}, 
-          {{$totalMay}}, 
-          {{$totalJune}}, 
-          {{$totalJuly}}, 
-          {{$totalAugust}}, 
-          {{$totalSeptember}}, 
-          {{$totalOctober}}, 
-          {{$totalNovember}}, 
-          {{$totalDecember}}]
+          {{$tertinggiJanuary}}, 
+          {{$tertinggiFebruary}}, 
+          {{$tertinggiMarch}}, 
+          {{$tertinggiApril}}, 
+          {{$tertinggiMay}}, 
+          {{$tertinggiJune}}, 
+          {{$tertinggiJuly}}, 
+          {{$tertinggiAugust}}, 
+          {{$tertinggiSeptember}}, 
+          {{$tertinggiOctober}}, 
+          {{$tertinggiNovember}}, 
+          {{$tertinggiDecember}}]
+
     }]
-    
 });
     </script>
     <br>
@@ -166,13 +166,13 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Total</a>
+          <a class="nav-link" href="/pengeluaran">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link" href="/pengeluaran/ratarata">Rata-Rata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
+          <a class="nav-link active" href="/pengeluaran/tertinggi">Tertinggi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pengeluaran/terendah">Terendah</a>
@@ -181,11 +181,37 @@
     </div>
     <div class="card-body">
       <div class="form-group row">
-        <div class="col-3">
-          <p>Total Tahun ini : </p>
+        <div class="col-3 text-left">
+          <p>Tertinggi per Tahun : </p>
+          <hr>
+          <p>Tertinggi Pada Bulan Januari : </p>
+          <p>Tertinggi Pada Februari: </p>
+          <p>Tertinggi Pada Maret: </p>
+          <p>Tertinggi Pada April: </p>
+          <p>Tertinggi Pada Mei: </p>
+          <p>Tertinggi Pada Juni: </p>
+          <p>Tertinggi Pada Juli: </p>
+          <p>Tertinggi Pada Agustus: </p>
+          <p>Tertinggi Pada September: </p>
+          <p>Tertinggi Pada Oktober: </p>
+          <p>Tertinggi Pada November: </p>
+          <p>Tertinggi Pada Desember: </p>
         </div>
         <div class="col-3">
-          <p>Rp {{$totalTahun}}</p>
+          <p>Rp {{$tertinggiTahun}}</p>
+          <hr>
+          <p>Rp {{$tertinggiJanuary}}</p>
+          <p>Rp {{$tertinggiFebruary}}</p>
+          <p>Rp {{$tertinggiMarch}}</p>
+          <p>Rp {{$tertinggiApril}}</p>
+          <p>Rp {{$tertinggiMay}}</p>
+          <p>Rp {{$tertinggiJune}}</p>
+          <p>Rp {{$tertinggiJuly}}</p>
+          <p>Rp {{$tertinggiAugust}}</p>
+          <p>Rp {{$tertinggiSeptember}}</p>
+          <p>Rp {{$tertinggiOctober}}</p>
+          <p>Rp {{$tertinggiNovember}}</p>
+          <p>Rp {{$tertinggiDecember}}</p>
         </div>
       </div>
     </div>

@@ -99,7 +99,7 @@
         type: 'column'
     },
     title: {
-        text: 'Total Pengeluaran perbulan'
+        text: 'Rata-rata Pengeluaran perbulan'
     },
     subtitle: {
         text: ''
@@ -124,7 +124,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Total'
+            text: 'Rata-Rata'
         }
     },
     tooltip: {
@@ -142,22 +142,22 @@
         }
     },
     series: [{
-        name: 'Pengeluaran',
+        name: 'Rata-rata',
         data: [
-          {{$totalJanuary}}, 
-          {{$totalFebruary}}, 
-          {{$totalMarch}}, 
-          {{$totalApril}}, 
-          {{$totalMay}}, 
-          {{$totalJune}}, 
-          {{$totalJuly}}, 
-          {{$totalAugust}}, 
-          {{$totalSeptember}}, 
-          {{$totalOctober}}, 
-          {{$totalNovember}}, 
-          {{$totalDecember}}]
+          {{$rata2January}}, 
+          {{$rata2February}}, 
+          {{$rata2March}}, 
+          {{$rata2April}}, 
+          {{$rata2May}}, 
+          {{$rata2June}}, 
+          {{$rata2July}}, 
+          {{$rata2August}}, 
+          {{$rata2September}}, 
+          {{$rata2October}}, 
+          {{$rata2November}}, 
+          {{$rata2December}}]
+
     }]
-    
 });
     </script>
     <br>
@@ -166,10 +166,10 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Total</a>
+          <a class="nav-link" href="/pengeluaran">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link active" href="/pengeluaran/ratarata">Rata-Rata</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
@@ -181,11 +181,37 @@
     </div>
     <div class="card-body">
       <div class="form-group row">
-        <div class="col-3">
-          <p>Total Tahun ini : </p>
+        <div class="col-3 text-left">
+          <p>Rata-Rata per Tahun : </p>
+          <hr>
+          <p>Rata-Rata Bulan Januari : </p>
+          <p>Rata-Rata Bulan Februari: </p>
+          <p>Rata-Rata Bulan Maret: </p>
+          <p>Rata-Rata Bulan April: </p>
+          <p>Rata-Rata Bulan Mei: </p>
+          <p>Rata-Rata Bulan Juni: </p>
+          <p>Rata-Rata Bulan Juli: </p>
+          <p>Rata-Rata Bulan Agustus: </p>
+          <p>Rata-Rata Bulan September: </p>
+          <p>Rata-Rata Bulan Oktober: </p>
+          <p>Rata-Rata Bulan November: </p>
+          <p>Rata-Rata Bulan Desember: </p>
         </div>
         <div class="col-3">
-          <p>Rp {{$totalTahun}}</p>
+          <p>Rp {{$rata2}}</p>
+          <hr>
+          <p>Rp {{$rata2January}}</p>
+          <p>Rp {{$rata2February}}</p>
+          <p>Rp {{$rata2March}}</p>
+          <p>Rp {{$rata2April}}</p>
+          <p>Rp {{$rata2May}}</p>
+          <p>Rp {{$rata2June}}</p>
+          <p>Rp {{$rata2July}}</p>
+          <p>Rp {{$rata2August}}</p>
+          <p>Rp {{$rata2September}}</p>
+          <p>Rp {{$rata2October}}</p>
+          <p>Rp {{$rata2November}}</p>
+          <p>Rp {{$rata2December}}</p>
         </div>
       </div>
     </div>
