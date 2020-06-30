@@ -26,6 +26,16 @@ Route::get('/pendapatan/grafik', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/pendapatan', 'PendapatanController@index')->name("pendapatan"); //pendapatan 
-Route::get('/pengunjung', 'PengunjungController@index')->name("pengunjung"); //pendapatan 
+
+//Dibawah Comment Ini Route Tentang Pendapatan
+Route::get('/pendapatan', 'PendapatanController@index'); 
+
+
+//Dibawah Comment Ini Route Tentang Pengeluaran
+Route::get('/pengeluaran', 'PengeluaranController@index'); 
+
+
+//Dibawah Comment Ini Route Tentang Pengunjung
+Route::get('/pengunjung', 'PengunjungController@index'); 
+
 
