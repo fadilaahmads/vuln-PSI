@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2020 at 06:14 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Waktu pembuatan: 30 Jun 2020 pada 17.35
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -40,7 +40,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -50,7 +50,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -63,7 +63,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `password_resets`
+-- Struktur dari tabel `password_resets`
 --
 
 CREATE TABLE `password_resets` (
@@ -75,51 +75,91 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pendapatan`
+-- Struktur dari tabel `pendapatan`
 --
 
 CREATE TABLE `pendapatan` (
   `id` int(8) NOT NULL,
   `nama_kegiatan` text NOT NULL,
-  `biaya` int(100) DEFAULT NULL,
   `tanggal` int(11) DEFAULT NULL,
   `bulan` int(11) NOT NULL,
-  `tahun` int(11) NOT NULL
+  `tahun` int(11) NOT NULL,
+  `biaya` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengeluaran`
+-- Struktur dari tabel `pengeluaran`
 --
 
 CREATE TABLE `pengeluaran` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nama_kegiatan` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `biaya` int(100) NOT NULL,
   `tanggal` int(11) NOT NULL,
   `bulan` int(11) NOT NULL,
   `tahun` int(11) NOT NULL,
+  `biaya` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data untuk tabel `pengeluaran`
+--
+
+INSERT INTO `pengeluaran` (`id`, `nama_kegiatan`, `tanggal`, `bulan`, `tahun`, `biaya`, `created_at`, `updated_at`) VALUES
+(1, 'Pembelian sapu', 5, 6, 2019, 200000, NULL, NULL),
+(2, 'Pembelian tempat sampah', 6, 6, 2019, 450000, NULL, NULL),
+(3, 'Pembayaran listrik', 1, 7, 2019, 400000, NULL, NULL),
+(4, 'Pembayaran air', 2, 8, 2019, 350000, NULL, NULL),
+(5, 'Pembelian roll kabel', 2, 9, 2019, 98000, NULL, NULL),
+(6, 'Pembayaran air', 6, 12, 2019, 340000, NULL, NULL),
+(7, 'Print pamflet', 4, 10, 2019, 135000, NULL, NULL),
+(8, 'Pembayaran listrik', 2, 2, 2019, 354000, NULL, NULL),
+(9, 'Print pamflet', 4, 10, 2019, 135000, NULL, NULL),
+(10, 'Pembayaran listrik', 2, 2, 2019, 354000, NULL, NULL),
+(11, 'Pembelian tenda', 3, 3, 2019, 650000, NULL, NULL),
+(12, 'Pembelian kotak medis', 4, 4, 2019, 470000, NULL, NULL),
+(13, 'Print banner', 5, 5, 2019, 320000, NULL, NULL),
+(14, 'Pembayaran listrik', 1, 1, 2019, 354000, NULL, NULL),
+(15, 'Pembayaran air', 11, 11, 2019, 354000, NULL, NULL),
+(16, 'Perbaikan pipa air', 9, 9, 2019, 354000, NULL, NULL),
+(17, 'Pembelian sesuatu', 11, 1, 2019, 100000, NULL, NULL),
+(18, 'Pembelian Sesuatu', 12, 2, 2019, 100000, NULL, NULL),
+(19, 'Pembelian sesuatu', 12, 7, 2019, 100000, NULL, NULL),
+(20, 'Pembelian Sesuatu', 12, 2, 2019, 100000, NULL, NULL),
+(21, 'Pembelian sesuatu', 11, 5, 2019, 100000, NULL, NULL),
+(22, 'Pembelian sesuatu', 13, 1, 2019, 100000, NULL, NULL),
+(23, 'Pembelian sesuatu', 19, 1, 2019, 100000, NULL, NULL),
+(24, 'Pembelian sesuatu', 11, 3, 2019, 100000, NULL, NULL),
+(25, 'Pembelian sesuatu', 21, 1, 2019, 100000, NULL, NULL),
+(26, 'Pembelian sesuatu', 23, 9, 2019, 100000, NULL, NULL),
+(27, 'Pembelian sesuatu', 29, 10, 2019, 100000, NULL, NULL),
+(28, 'Pembelian sesuatu', 11, 1, 2019, 100000, NULL, NULL),
+(29, 'Pembelian sesuatu', 31, 1, 2019, 100000, NULL, NULL),
+(30, 'Pembelian sesuatu', 25, 2, 2019, 100000, NULL, NULL),
+(31, 'Pembelian sesuatu', 11, 1, 2019, 100000, NULL, NULL),
+(32, 'Pembelian sesuatu', 11, 12, 2019, 100000, NULL, NULL),
+(33, 'Pembelian sesuatu', 11, 11, 2019, 100000, NULL, NULL),
+(34, 'Pembelian sesuatu', 11, 4, 2019, 100000, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pengunjung`
+-- Struktur dari tabel `pengunjung`
 --
 
 CREATE TABLE `pengunjung` (
   `id` int(8) NOT NULL,
   `jenis` varchar(20) NOT NULL,
-  `periode` varchar(20) DEFAULT NULL
+  `periode` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -134,81 +174,88 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'user', 'user@gmail.com', NULL, '$2y$10$cgWuUDgNrhm3ZVl7itiWEetQyI1Ya3p9pCtj4kXVxjAme1PoLDaa6', NULL, '2020-06-29 21:00:16', '2020-06-29 21:00:16');
+
+--
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `password_resets`
+-- Indeks untuk tabel `password_resets`
 --
 ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
--- Indexes for table `pendapatan`
+-- Indeks untuk tabel `pendapatan`
 --
 ALTER TABLE `pendapatan`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `jenis` (`nama_kegiatan`) USING HASH;
 
 --
--- Indexes for table `pengeluaran`
+-- Indeks untuk tabel `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pengunjung`
+-- Indeks untuk tabel `pengunjung`
 --
 ALTER TABLE `pengunjung`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `jenis` (`jenis`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `pengeluaran`
+-- AUTO_INCREMENT untuk tabel `pengeluaran`
 --
 ALTER TABLE `pengeluaran`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
