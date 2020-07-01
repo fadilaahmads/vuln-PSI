@@ -19,7 +19,71 @@
                 font-family:'IBM Plex Sans', sans-serif;
                 background-color: #a6dcef;
             }
+    .nav-link:hover::after {
+              content:'' ;
+              display: block;
+              border-bottom: 3px solid #a6dcef;
+              width: 50%;
+              margin: auto;
+              padding-bottom: 4px;
+              margin-bottom: -7px;
+          }
+    .jumbotron {
+    background-image: url(img/tangan.jpg);
+    background-size: cover;
+    text-align: center;
+    position: relative;
+    margin-top: -75px;
+    height: 640px;
+    }
+
+    .jumbotron .container {
+    position: relative;
+    z-index: 1;
+    }
+
+    .jumbotron .display-4 {
+    color: rgb(146, 226, 219);
+    margin-top: 150px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 64px;
+    margin-bottom: 30px;
+    }
+
+    .info-panel{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -100px;
+    background-color: white;
+    padding: 30px;
+    }
+
+    .info-panel img{
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .info-panel h4 {
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+
+
+    .info-panel p {
+        font-size: 14px;
+        color: #ACACAC;
+        margin-top: -5px;
+        font-weight: 200;
+    }
     </style>
+
+
   </head>
   <body>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
@@ -31,7 +95,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
+            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
             <a class="nav-item nav-link" href="#">Pengeluaran</a>
             <a class="nav-item nav-link" href="#">Pengunjung</a>
           </div>
@@ -70,6 +134,7 @@
                     </ul>
                 </div>
       </div>
+      </div>
       </nav> 
 
 
@@ -77,43 +142,41 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container text-center">
     <h1 class="display-4">XploreJogja</h1>
-    <p>Menyajikan data-data </p>
   </div>
 </div>
 
 
 <div class="container">
-  <div class="row">
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">PENDAPATAN</h5>
-        <p class="card-text">Menampilkan data banyaknya pendapatan tempat wisata </p>
-        <a href="{{ route('grafik') }}" class="btn btn-primary">Go</a>
+    <!-- info panel -->
+    <div class="row justify-content-center">
+      <div class="col-12 info-panel">
+        <div class="row">
+          <div class="col-lg">
+                <img src="img/pendapatan.jpg" alt="pendapatan" class="float-left">
+                <h4>PENDAPATAN</h4>
+                <p>Menampilkan data banyaknya pendapatan tempat wisata </p>
+                <a href="{{ route('grafik') }}" class="btn btn-primary">Go</a>
+          </div>
+
+          <div class="col-lg">
+                <img src="img/pengeluaran.jpg" alt="pengeluaran" class="float-left">
+                <h4>PENGELUARAN</h4>
+                <p>Menampilkan data banyaknya pengeluaran tempat wisata</p>
+          </div>
+
+          <div class="col-lg">
+                <img src="img/pengunjung.jpg" alt="pengunjung" class="float-left">
+                <h4>PENGUNJUNG</h4>
+                <p>Menampilkan data kategori umur pengunjung tempat wisata </p>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">PENGELUARAN</h5>
-        <p class="card-text">Menampilkan data banyaknya pengeluaran tempat wisata </p>
-        <a href="#" class="btn btn-primary">Go</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">PENGUNJUNG</h5>
-        <p class="card-text">Menampilkan data kategori umur pengunjung tempat wisata </p>
-        <a href="#" class="btn btn-primary">Go</a>
-      </div>
-    </div>
-  </div>
+<!-- end infopanel -->
+
 </div>
-    </div>
-  </div>
+
 </div>
 
 
