@@ -31,16 +31,16 @@
   <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
       <div class="container">
-        <a class="navbar-brand" href="#">XploreJogja</a>
+        <a class="navbar-brand" href="/home">XploreJogja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
-            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
-            <a class="nav-item nav-link" href="#">Pengunjung</a>
+            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
          <!-- Right Side Of Navbar -->
@@ -181,11 +181,37 @@
     </div>
     <div class="card-body">
       <div class="form-group row">
-        <div class="col-3">
+        <div class="col-3 text-left">
           <p>Total Tahun ini : </p>
+          <hr>
+          <p>Total Bulan Januari : </p>
+          <p>Total Bulan Februari: </p>
+          <p>Total Bulan Maret: </p>
+          <p>Total Bulan April: </p>
+          <p>Total Bulan Mei: </p>
+          <p>Total Bulan Juni: </p>
+          <p>Total Bulan Juli: </p>
+          <p>Total Bulan Agustus: </p>
+          <p>Total Bulan September: </p>
+          <p>Total Bulan Oktober: </p>
+          <p>Total Bulan November: </p>
+          <p>Total Bulan Desember: </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 text-left">
           <p>Rp {{$totalTahun}}</p>
+          <hr>
+          <p>Rp {{$totalJanuary}}</p>
+          <p>Rp {{$totalFebruary}}</p>
+          <p>Rp {{$totalMarch}}</p>
+          <p>Rp {{$totalApril}}</p>
+          <p>Rp {{$totalMay}}</p>
+          <p>Rp {{$totalJune}}</p>
+          <p>Rp {{$totalJuly}}</p>
+          <p>Rp {{$totalAugust}}</p>
+          <p>Rp {{$totalSeptember}}</p>
+          <p>Rp {{$totalOctober}}</p>
+          <p>Rp {{$totalNovember}}</p>
+          <p>Rp {{$totalDecember}}</p>
         </div>
       </div>
     </div>

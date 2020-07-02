@@ -94,10 +94,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="/home">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
-            <a class="nav-item nav-link" href="#">Pengeluaran</a>
-            <a class="nav-item nav-link" href="#">Pengunjung</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
          <!-- Right Side Of Navbar -->

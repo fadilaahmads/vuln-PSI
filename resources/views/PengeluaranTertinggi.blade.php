@@ -31,16 +31,16 @@
   <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
       <div class="container">
-        <a class="navbar-brand" href="#">XploreJogja</a>
+        <a class="navbar-brand" href="/home">XploreJogja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
-            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
-            <a class="nav-item nav-link" href="#">Pengunjung</a>
+            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
          <!-- Right Side Of Navbar -->
@@ -169,7 +169,7 @@
           <a class="nav-link" href="/pengeluaran">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/ratarata">Rata-Rata</a>
+          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/pengeluaran/tertinggi">Tertinggi</a>
@@ -182,7 +182,7 @@
     <div class="card-body">
       <div class="form-group row">
         <div class="col-3 text-left">
-          <p>Tertinggi per Tahun : </p>
+          <p>Tertinggi Tahun ini : </p>
           <hr>
           <p>Tertinggi Pada Bulan Januari : </p>
           <p>Tertinggi Pada Februari: </p>

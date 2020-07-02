@@ -37,10 +37,10 @@
         </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link" href="#">Home </a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
-            <a class="nav-item nav-link" href="#">Pengeluaran</a>
-            <a class="nav-item nav-link active" href="#">Pengunjung <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/home">Home </a>
+            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link active" href="/pengunjung">Pengunjung <span class="sr-only">(current)</span></a>
             </div>
           </div>
         </div>

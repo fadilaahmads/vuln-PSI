@@ -31,16 +31,16 @@
   <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
       <div class="container">
-        <a class="navbar-brand" href="#">XploreJogja</a>
+        <a class="navbar-brand" href="/home">XploreJogja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Pendapatan</a>
-            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
-            <a class="nav-item nav-link" href="#">Pengunjung</a>
+            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
          <!-- Right Side Of Navbar -->
@@ -182,7 +182,7 @@
     <div class="card-body">
       <div class="form-group row">
         <div class="col-3 text-left">
-          <p>Terendah per Tahun : </p>
+          <p>Terendah Tahun ini : </p>
           <hr>
           <p>Terendah Bulan Januari : </p>
           <p>Terendah Bulan Februari: </p>
