@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2020 at 09:00 AM
+-- Generation Time: Jul 02, 2020 at 11:22 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -94,9 +94,14 @@ CREATE TABLE `pendapatan` (
 INSERT INTO `pendapatan` (`id`, `nama_kegiatan`, `tanggal`, `bulan`, `tahun`, `biaya`) VALUES
 (1, 'Sponsor', 23, 5, 2019, 100000),
 (2, 'Penjualan tiket', 31, 5, 2019, 1500000),
-(3, 'Donatur A', 23, 6, 2019, 2000000),
+(3, 'Donatur A', 23, 6, 2019, 200000),
 (4, 'Donatur B', 20, 7, 2019, 500000),
-(5, 'apa coba', 20, 8, 2020, 1000000000);
+(5, 'apa coba', 20, 8, 2020, 100000),
+(6, 'apa hayo', 21, 1, 2019, 100000),
+(7, 'coba', 22, 2, 2019, 100000),
+(8, 'jajal', 23, 4, 2019, 100000),
+(9, 'apa', 24, 3, 2019, 100000),
+(10, 'cobacoba', 25, 5, 2019, 100000);
 
 -- --------------------------------------------------------
 
@@ -165,7 +170,7 @@ CREATE TABLE `pengunjung` (
   `id` int(8) NOT NULL,
   `jenis` varchar(20) NOT NULL,
   `jumlah` int(6) DEFAULT NULL,
-  `bulan` varchar(15) DEFAULT NULL
+  `bulan` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -173,8 +178,8 @@ CREATE TABLE `pengunjung` (
 --
 
 INSERT INTO `pengunjung` (`id`, `jenis`, `jumlah`, `bulan`) VALUES
-(1, 'anak-anak', 100000, 'januari'),
-(2, 'dewasa', 20000, 'januari');
+(1, 'anak-anak', 100000, 1),
+(2, 'dewasa', 20000, 2);
 
 -- --------------------------------------------------------
 
@@ -198,7 +203,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'user', 'user@gmail.com', NULL, '$2y$10$cgWuUDgNrhm3ZVl7itiWEetQyI1Ya3p9pCtj4kXVxjAme1PoLDaa6', NULL, '2020-06-29 21:00:16', '2020-06-29 21:00:16');
+(1, 'user', 'user@gmail.com', NULL, '$2y$10$cgWuUDgNrhm3ZVl7itiWEetQyI1Ya3p9pCtj4kXVxjAme1PoLDaa6', NULL, '2020-06-29 21:00:16', '2020-06-29 21:00:16'),
+(2, 'aku', 'aku@gmail.com', NULL, '$2y$10$0gsGsuhRCMS1ma/bnuURe.mbRC6wcpJZxkTav0aMHu1cV.bPDMxUu', NULL, '2020-07-01 23:04:44', '2020-07-01 23:04:44');
 
 --
 -- Indexes for dumped tables
@@ -275,7 +281,7 @@ ALTER TABLE `pengeluaran`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
