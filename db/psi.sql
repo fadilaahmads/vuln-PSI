@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2020 at 11:33 AM
+-- Generation Time: Jul 02, 2020 at 06:09 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -168,7 +168,7 @@ INSERT INTO `pengeluaran` (`id`, `nama_kegiatan`, `tanggal`, `bulan`, `tahun`, `
 
 CREATE TABLE `pengunjung` (
   `id` int(8) NOT NULL,
-  `jenis` varchar(20) NOT NULL,
+  `jenis` int(1) NOT NULL,
   `jumlah` int(6) DEFAULT NULL,
   `bulan` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -178,8 +178,30 @@ CREATE TABLE `pengunjung` (
 --
 
 INSERT INTO `pengunjung` (`id`, `jenis`, `jumlah`, `bulan`) VALUES
-(1, 'anak-anak', 100000, 1),
-(2, 'dewasa', 20000, 2);
+(1, 1, 100000, 1),
+(2, 2, 20000, 1),
+(3, 1, 100, 2),
+(4, 2, 1000, 2),
+(5, 1, 500, 3),
+(6, 2, 60, 3),
+(7, 1, 550, 4),
+(8, 2, 400, 4),
+(9, 1, 200, 5),
+(10, 2, 100, 5),
+(11, 1, 201, 6),
+(12, 2, 220, 6),
+(13, 1, 290, 7),
+(14, 2, 299, 7),
+(15, 1, 390, 8),
+(16, 2, 455, 8),
+(17, 1, 344, 9),
+(18, 2, 433, 9),
+(19, 1, 677, 10),
+(20, 2, 766, 10),
+(21, 1, 90, 11),
+(22, 2, 99, 11),
+(23, 1, 100, 12),
+(24, 2, 199, 12);
 
 -- --------------------------------------------------------
 
@@ -245,8 +267,7 @@ ALTER TABLE `pengeluaran`
 -- Indexes for table `pengunjung`
 --
 ALTER TABLE `pengunjung`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `jenis` (`jenis`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
