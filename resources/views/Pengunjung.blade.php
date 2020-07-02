@@ -17,6 +17,15 @@
         font-family:'IBM Plex Sans', sans-serif;
         background-color: #a6dcef;
     }
+    .nav-link:hover::after {
+              content:'' ;
+              display: block;
+              border-bottom: 3px solid #a6dcef;
+              width: 50%;
+              margin: auto;
+              padding-bottom: 4px;
+              margin-bottom: -7px;
+          }
 
     .fitur {
         margin-top: 80px;
@@ -43,6 +52,41 @@
             <a class="nav-item nav-link active" href="/pengunjung">Pengunjung <span class="sr-only">(current)</span></a>
             </div>
           </div>
+          <!-- Right Side Of Navbar -->
+         <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+      </div>
+      </div>
         </div>
       </nav> 
 

@@ -17,6 +17,15 @@
         font-family:'IBM Plex Sans', sans-serif;
         background-color: #a6dcef;
     }
+    .nav-link:hover::after {
+              content:'' ;
+              display: block;
+              border-bottom: 3px solid #a6dcef;
+              width: 50%;
+              margin: auto;
+              padding-bottom: 4px;
+              margin-bottom: -7px;
+          }
 
     .fitur {
         margin-top: 80px;
