@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2020 at 11:22 AM
+-- Generation Time: Jul 02, 2020 at 11:33 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -93,7 +93,7 @@ CREATE TABLE `pendapatan` (
 
 INSERT INTO `pendapatan` (`id`, `nama_kegiatan`, `tanggal`, `bulan`, `tahun`, `biaya`) VALUES
 (1, 'Sponsor', 23, 5, 2019, 100000),
-(2, 'Penjualan tiket', 31, 5, 2019, 1500000),
+(2, 'Penjualan tiket', 31, 5, 2019, 150000),
 (3, 'Donatur A', 23, 6, 2019, 200000),
 (4, 'Donatur B', 20, 7, 2019, 500000),
 (5, 'apa coba', 20, 8, 2020, 100000),
