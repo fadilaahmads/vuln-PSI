@@ -90,10 +90,8 @@
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pengeluaran</h4>
-          <a href="/pengeluaran" class="btn btn-primary tombol">Tahun</a>
-          <a href="" class="btn btn-primary tombol">Bulan</a>
-        <div class="chart" id="chartNilai"></div>
+        <h4 class="fitur text-center">Rata-rata Pengeluaran perbulan</h4>
+         <div class="chart" id="chartNilai"></div>
       </div>
   
     <!-- Optional JavaScript -->
@@ -105,10 +103,10 @@
     <script>
       Highcharts.chart('chartNilai', {
     chart: {
-        type: 'column'
+        type: 'line'
     },
     title: {
-        text: 'Rata-rata Pengeluaran perbulan'
+        text: ''
     },
     subtitle: {
         text: ''

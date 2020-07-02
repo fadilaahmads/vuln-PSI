@@ -155,7 +155,6 @@
                 <img src="img/pendapatan.jpg" alt="pendapatan" class="float-left">
                 <h4>PENDAPATAN</h4>
                 <p>Menampilkan data banyaknya pendapatan tempat wisata </p>
-                <a href="{{ route('grafik') }}" class="btn btn-primary">Go</a>
           </div>
 
           <div class="col-lg">

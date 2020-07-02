@@ -105,7 +105,7 @@
     <script>
       Highcharts.chart('chartNilai', {
     chart: {
-        type: 'column'
+        type: 'line'
     },
     title: {
         text: 'Pengeluaran Tertinggi Perbulan'

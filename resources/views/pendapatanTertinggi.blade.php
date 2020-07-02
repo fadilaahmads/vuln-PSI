@@ -47,8 +47,8 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
-            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link active" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
             <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
@@ -90,8 +90,8 @@
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pengeluaran Terendah per Bulan</h4>
-        <div class="chart" id="chartNilai"></div>
+        <h4 class="fitur text-center">Pendapatan Tertinggi Perbulan</h4>
+          <div class="chart" id="chartNilai"></div>
       </div>
   
     <!-- Optional JavaScript -->
@@ -131,7 +131,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Terendah'
+            text: 'Tertinggi'
         }
     },
     tooltip: {
@@ -149,20 +149,20 @@
         }
     },
     series: [{
-        name: 'Terendah',
+        name: 'Tertinggi',
         data: [
-          {{$terendahJanuary}}, 
-          {{$terendahFebruary}}, 
-          {{$terendahMarch}}, 
-          {{$terendahApril}}, 
-          {{$terendahMay}}, 
-          {{$terendahJune}}, 
-          {{$terendahJuly}}, 
-          {{$terendahAugust}}, 
-          {{$terendahSeptember}}, 
-          {{$terendahOctober}}, 
-          {{$terendahNovember}}, 
-          {{$terendahDecember}}]
+          {{$tertinggiJanuary}}, 
+          {{$tertinggiFebruary}}, 
+          {{$tertinggiMarch}}, 
+          {{$tertinggiApril}}, 
+          {{$tertinggiMay}}, 
+          {{$tertinggiJune}}, 
+          {{$tertinggiJuly}}, 
+          {{$tertinggiAugust}}, 
+          {{$tertinggiSeptember}}, 
+          {{$tertinggiOctober}}, 
+          {{$tertinggiNovember}}, 
+          {{$tertinggiDecember}}]
 
     }]
 });
@@ -173,52 +173,52 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran">Total</a>
+          <a class="nav-link" href="/pendapatan">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link" href="/pendapatan/rata2">Rata-Rata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
+          <a class="nav-link active" href="/pendapatan/tertinggi">Tertinggi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pengeluaran/terendah">Terendah</a>
+          <a class="nav-link" href="/pendapatan/terendah">Terendah</a>
         </li>
       </ul>
     </div>
     <div class="card-body">
       <div class="form-group row">
         <div class="col-3 text-left">
-          <p>Terendah Tahun ini : </p>
+          <p>Tertinggi Tahun ini : </p>
           <hr>
-          <p>Terendah Bulan Januari : </p>
-          <p>Terendah Bulan Februari: </p>
-          <p>Terendah Bulan Maret: </p>
-          <p>Terendah Bulan April: </p>
-          <p>Terendah Bulan Mei: </p>
-          <p>Terendah Bulan Juni: </p>
-          <p>Terendah Bulan Juli: </p>
-          <p>Terendah Bulan Agustus: </p>
-          <p>Terendah Bulan September: </p>
-          <p>Terendah Bulan Oktober: </p>
-          <p>Terendah Bulan November: </p>
-          <p>Terendah Bulan Desember: </p>
+          <p>Tertinggi Pada Bulan Januari : </p>
+          <p>Tertinggi Pada Februari: </p>
+          <p>Tertinggi Pada Maret: </p>
+          <p>Tertinggi Pada April: </p>
+          <p>Tertinggi Pada Mei: </p>
+          <p>Tertinggi Pada Juni: </p>
+          <p>Tertinggi Pada Juli: </p>
+          <p>Tertinggi Pada Agustus: </p>
+          <p>Tertinggi Pada September: </p>
+          <p>Tertinggi Pada Oktober: </p>
+          <p>Tertinggi Pada November: </p>
+          <p>Tertinggi Pada Desember: </p>
         </div>
         <div class="col-3">
-          <p>Rp {{$terendahTahun}}</p>
+          <p>Rp {{$tertinggiTahun}}</p>
           <hr>
-          <p>Rp {{$terendahJanuary}}</p>
-          <p>Rp {{$terendahFebruary}}</p>
-          <p>Rp {{$terendahMarch}}</p>
-          <p>Rp {{$terendahApril}}</p>
-          <p>Rp {{$terendahMay}}</p>
-          <p>Rp {{$terendahJune}}</p>
-          <p>Rp {{$terendahJuly}}</p>
-          <p>Rp {{$terendahAugust}}</p>
-          <p>Rp {{$terendahSeptember}}</p>
-          <p>Rp {{$terendahOctober}}</p>
-          <p>Rp {{$terendahNovember}}</p>
-          <p>Rp {{$terendahDecember}}</p>
+          <p>Rp {{$tertinggiJanuary}}</p>
+          <p>Rp {{$tertinggiFebruary}}</p>
+          <p>Rp {{$tertinggiMarch}}</p>
+          <p>Rp {{$tertinggiApril}}</p>
+          <p>Rp {{$tertinggiMay}}</p>
+          <p>Rp {{$tertinggiJune}}</p>
+          <p>Rp {{$tertinggiJuly}}</p>
+          <p>Rp {{$tertinggiAugust}}</p>
+          <p>Rp {{$tertinggiSeptember}}</p>
+          <p>Rp {{$tertinggiOctober}}</p>
+          <p>Rp {{$tertinggiNovember}}</p>
+          <p>Rp {{$tertinggiDecember}}</p>
         </div>
       </div>
     </div>

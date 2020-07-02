@@ -33,7 +33,7 @@ class PendapatanController extends Controller
         $totalDecember =  DB::table('pendapatan')->where('bulan','=','12')->get()->sum('biaya');
         $totalTahun = DB::table('pendapatan')->where('tahun','=','2019')->get()->sum('biaya');
 
-        return view('pendapatan',[
+        return view('Pendapatan',[
             'totalJanuary'=>$totalJanuary,
             'totalFebruary'=>$totalFebruary,
             'totalMarch'=>$totalMarch,

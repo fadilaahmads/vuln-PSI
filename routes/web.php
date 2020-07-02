@@ -28,8 +28,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Dibawah Comment Ini Route Tentang Pendapatan
-Route::get('/pendapatan', 'PendapatanController@index')->name("pendapatan"); 
-
+Route::get('/pendapatan', 'PendapatanController@index');
+Route::get('/pendapatan/rata2', 'PendapatanController@rata2');
+Route::get('/pendapatan/tertinggi', 'PendapatanController@tertinggi');
+Route::get('/pendapatan/terendah', 'PendapatanController@terendah');
 
 //Dibawah Comment Ini Route Tentang Pengeluaran
 Route::get('/pengeluaran', 'PengeluaranController@index');
@@ -40,8 +42,9 @@ Route::get('/pengeluaran/terendah', 'PengeluaranController@terendah');
 
 
 //Dibawah Comment Ini Route Tentang Pengunjung
-Route::get('/pengunjung', function(){
-    return view('Pengunjung');
-}); 
+Route::get('/pengunjung', 'PengunjungController@index');
+Route::get('/pengunjung/rata2', 'PengunjungController@rata2');
+Route::get('/pengunjung/tertinggi', 'PengunjungController@tertinggi');
+Route::get('/pengunjung/terendah', 'PengunjungController@terendah');
 
 

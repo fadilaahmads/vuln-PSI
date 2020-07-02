@@ -46,9 +46,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
-            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/home">tayo <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
             <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
           </div>
         </div>
@@ -90,7 +90,7 @@
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pengeluaran Terendah per Bulan</h4>
+        <h4 class="fitur text-center">Pendapatan Terendah per Bulan</h4>
         <div class="chart" id="chartNilai"></div>
       </div>
   
@@ -172,17 +172,17 @@
   <div class="card text-center offset-1 col-10">
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
-        <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran">Total</a>
+      <li class="nav-item">
+          <a class="nav-link" href="/pendapatan">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link" href="/pendapatan/rata2">Rata-Rata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
+          <a class="nav-link" href="/pendapatan/tertinggi">Tertinggi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pengeluaran/terendah">Terendah</a>
+          <a class="nav-link active" href="/pendapatan/terendah">Terendah</a>
         </li>
       </ul>
     </div>

@@ -90,9 +90,7 @@
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pendapatan</h4>
-          <a href="/pendapatan" class="btn btn-primary tombol">Tahun</a>
-          <a href="" class="btn btn-primary tombol">Bulan</a>
+        <h4 class="fitur text-center">Total pendapatan perbulan</h4>
         <div class="chart" id="chartNilai"></div>
       </div>
   
@@ -105,10 +103,10 @@
     <script>
       Highcharts.chart('chartNilai', {
     chart: {
-        type: 'column'
+        type: 'line'
     },
     title: {
-        text: 'Total Pendapatan perbulan'
+        text: ''
     },
     subtitle: {
         text: ''

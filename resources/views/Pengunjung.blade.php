@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Data Pengunjung</title>
+    <title>Data Pendapatan</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     
     <!-- style -->
@@ -38,21 +38,21 @@
 
   </head>
   <body>
-      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
-        <div class="container">
-        <a class="navbar-brand" href="#">XploreJogja</a>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-info">
+      <div class="container">
+        <a class="navbar-brand" href="/home">XploreJogja</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/home">Home </a>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
             <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
-            <a class="nav-item nav-link active" href="/pengunjung">Pengunjung <span class="sr-only">(current)</span></a>
-            </div>
+            <a class="nav-item nav-link active" href="/pengunjung">Pengunjung</a>
           </div>
-          <!-- Right Side Of Navbar -->
+        </div>
+         <!-- Right Side Of Navbar -->
          <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -86,43 +86,14 @@
                     </ul>
                 </div>
       </div>
-      </div>
-        </div>
       </nav> 
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pengunjung</h4>
-          <a href="" class="btn btn-primary tombol">Minggu</a>
-          <a href="" class="btn btn-primary tombol">Bulan</a>
+        <h4 class="fitur text-center">Total pengunjung perbulan</h4>
         <div class="chart" id="chartNilai"></div>
       </div>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -132,10 +103,10 @@
     <script>
       Highcharts.chart('chartNilai', {
     chart: {
-        type: 'column'
+        type: 'line'
     },
     title: {
-        text: 'Banyaknya Pengunjung perbulan'
+        text: ''
     },
     subtitle: {
         text: ''
@@ -160,7 +131,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Banyaknya'
+            text: 'Total'
         }
     },
     tooltip: {
@@ -178,15 +149,82 @@
         }
     },
     series: [{
-        name: 'Anak-anak',
-        data: [49, 71, 98, 93, 106, 84, 105, 104, 91, 83, 106, 92]
-
-    }, {
-        name: 'Dewasa',
-        data: [83, 75, 106, 129, 144, 176, 135, 148, 100, 194, 95, 54]
-
+        name: 'Pengunjung',
+        data: [
+          {{$totalJanuary}}, 
+          {{$totalFebruary}}, 
+          {{$totalMarch}}, 
+          {{$totalApril}}, 
+          {{$totalMay}}, 
+          {{$totalJune}}, 
+          {{$totalJuly}}, 
+          {{$totalAugust}}, 
+          {{$totalSeptember}}, 
+          {{$totalOctober}}, 
+          {{$totalNovember}}, 
+          {{$totalDecember}}]
     }]
+    
+    
 });
     </script>
+    <br>
+    <br>
+  <div class="card text-center offset-1 col-10">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Total</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pengunjung/rata2">Rata-Rata</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pengunjung/tertinggi">Tertinggi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pengunjung/terendah">Terendah</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <div class="form-group row">
+        <div class="col-3 text-left">
+          <p>Total Tahun ini : </p>
+          <hr>
+          <p>Total Bulan Januari : </p>
+          <p>Total Bulan Februari: </p>
+          <p>Total Bulan Maret: </p>
+          <p>Total Bulan April: </p>
+          <p>Total Bulan Mei: </p>
+          <p>Total Bulan Juni: </p>
+          <p>Total Bulan Juli: </p>
+          <p>Total Bulan Agustus: </p>
+          <p>Total Bulan September: </p>
+          <p>Total Bulan Oktober: </p>
+          <p>Total Bulan November: </p>
+          <p>Total Bulan Desember: </p>
+        </div>
+        <div class="col-3 text-left">
+          <p> {{$totalTahun}}</p>
+          <hr>
+          <p> {{$totalJanuary}}</p>
+          <p> {{$totalFebruary}}</p>
+          <p> {{$totalMarch}}</p>
+          <p> {{$totalApril}}</p>
+          <p> {{$totalMay}}</p>
+          <p> {{$totalJune}}</p>
+          <p> {{$totalJuly}}</p>
+          <p> {{$totalAugust}}</p>
+          <p> {{$totalSeptember}}</p>
+          <p> {{$totalOctober}}</p>
+          <p> {{$totalNovember}}</p>
+          <p> {{$totalDecember}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+<br/>
+<br/>
   </body>
 </html>

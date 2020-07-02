@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Data Pengeluaran</title>
+    <title>Data Pendapatan</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     
     <!-- style -->
@@ -47,9 +47,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="/pendapatan">Pendapatan</a>
-            <a class="nav-item nav-link active" href="/pengeluaran">Pengeluaran</a>
-            <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
+            <a class="nav-item nav-link active" href="/pendapatan">Pendapatan</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
+            <a class="nav-item nav-link" href="/pengeluaran">Pengunjung</a>
           </div>
         </div>
          <!-- Right Side Of Navbar -->
@@ -90,7 +90,7 @@
 
 
       <div class="container">
-        <h4 class="fitur text-center">Pengeluaran Terendah per Bulan</h4>
+        <h4 class="fitur text-center">Rata-rata pendapatan perbulan</h4>
         <div class="chart" id="chartNilai"></div>
       </div>
   
@@ -131,7 +131,7 @@
     yAxis: {
         min: 0,
         title: {
-            text: 'Terendah'
+            text: 'Rata-Rata'
         }
     },
     tooltip: {
@@ -149,20 +149,20 @@
         }
     },
     series: [{
-        name: 'Terendah',
+        name: 'Rata-rata',
         data: [
-          {{$terendahJanuary}}, 
-          {{$terendahFebruary}}, 
-          {{$terendahMarch}}, 
-          {{$terendahApril}}, 
-          {{$terendahMay}}, 
-          {{$terendahJune}}, 
-          {{$terendahJuly}}, 
-          {{$terendahAugust}}, 
-          {{$terendahSeptember}}, 
-          {{$terendahOctober}}, 
-          {{$terendahNovember}}, 
-          {{$terendahDecember}}]
+          {{$rata2January}}, 
+          {{$rata2February}}, 
+          {{$rata2March}}, 
+          {{$rata2April}}, 
+          {{$rata2May}}, 
+          {{$rata2June}}, 
+          {{$rata2July}}, 
+          {{$rata2August}}, 
+          {{$rata2September}}, 
+          {{$rata2October}}, 
+          {{$rata2November}}, 
+          {{$rata2December}}]
 
     }]
 });
@@ -173,52 +173,52 @@
     <div class="card-header">
       <ul class="nav nav-tabs card-header-tabs">
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran">Total</a>
+          <a class="nav-link" href="/pendapatan">Total</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/rata2">Rata-Rata</a>
+          <a class="nav-link active" href="/pendapatan/rata2">Rata-Rata</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/pengeluaran/tertinggi">Tertinggi</a>
+          <a class="nav-link" href="/pendapatan/tertinggi">Tertinggi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/pengeluaran/terendah">Terendah</a>
+          <a class="nav-link" href="/pendapatan/terendah">Terendah</a>
         </li>
       </ul>
     </div>
     <div class="card-body">
       <div class="form-group row">
         <div class="col-3 text-left">
-          <p>Terendah Tahun ini : </p>
+          <p>Rata-Rata Tahun ini : </p>
           <hr>
-          <p>Terendah Bulan Januari : </p>
-          <p>Terendah Bulan Februari: </p>
-          <p>Terendah Bulan Maret: </p>
-          <p>Terendah Bulan April: </p>
-          <p>Terendah Bulan Mei: </p>
-          <p>Terendah Bulan Juni: </p>
-          <p>Terendah Bulan Juli: </p>
-          <p>Terendah Bulan Agustus: </p>
-          <p>Terendah Bulan September: </p>
-          <p>Terendah Bulan Oktober: </p>
-          <p>Terendah Bulan November: </p>
-          <p>Terendah Bulan Desember: </p>
+          <p>Rata-Rata Bulan Januari : </p>
+          <p>Rata-Rata Bulan Februari: </p>
+          <p>Rata-Rata Bulan Maret: </p>
+          <p>Rata-Rata Bulan April: </p>
+          <p>Rata-Rata Bulan Mei: </p>
+          <p>Rata-Rata Bulan Juni: </p>
+          <p>Rata-Rata Bulan Juli: </p>
+          <p>Rata-Rata Bulan Agustus: </p>
+          <p>Rata-Rata Bulan September: </p>
+          <p>Rata-Rata Bulan Oktober: </p>
+          <p>Rata-Rata Bulan November: </p>
+          <p>Rata-Rata Bulan Desember: </p>
         </div>
         <div class="col-3">
-          <p>Rp {{$terendahTahun}}</p>
+          <p>Rp {{$rata2}}</p>
           <hr>
-          <p>Rp {{$terendahJanuary}}</p>
-          <p>Rp {{$terendahFebruary}}</p>
-          <p>Rp {{$terendahMarch}}</p>
-          <p>Rp {{$terendahApril}}</p>
-          <p>Rp {{$terendahMay}}</p>
-          <p>Rp {{$terendahJune}}</p>
-          <p>Rp {{$terendahJuly}}</p>
-          <p>Rp {{$terendahAugust}}</p>
-          <p>Rp {{$terendahSeptember}}</p>
-          <p>Rp {{$terendahOctober}}</p>
-          <p>Rp {{$terendahNovember}}</p>
-          <p>Rp {{$terendahDecember}}</p>
+          <p>Rp {{$rata2January}}</p>
+          <p>Rp {{$rata2February}}</p>
+          <p>Rp {{$rata2March}}</p>
+          <p>Rp {{$rata2April}}</p>
+          <p>Rp {{$rata2May}}</p>
+          <p>Rp {{$rata2June}}</p>
+          <p>Rp {{$rata2July}}</p>
+          <p>Rp {{$rata2August}}</p>
+          <p>Rp {{$rata2September}}</p>
+          <p>Rp {{$rata2October}}</p>
+          <p>Rp {{$rata2November}}</p>
+          <p>Rp {{$rata2December}}</p>
         </div>
       </div>
     </div>
