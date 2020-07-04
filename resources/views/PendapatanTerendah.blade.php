@@ -46,7 +46,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/home">tayo <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link active" href="/pendapatan">Pendapatan</a>
             <a class="nav-item nav-link" href="/pengeluaran">Pengeluaran</a>
             <a class="nav-item nav-link" href="/pengunjung">Pengunjung</a>
@@ -91,6 +91,7 @@
 
       <div class="container">
         <h4 class="fitur text-center">Pendapatan Terendah per Bulan</h4>
+        <a href="/pendapatan/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
         <div class="chart" id="chartNilai"></div>
       </div>
   

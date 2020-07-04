@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\DB;
+use App\Pengunjung;
+use App\Exports\PengunjungExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 class PengunjungController extends Controller
 {
     public function index()
@@ -135,6 +140,10 @@ class PengunjungController extends Controller
             'terendahNovember'=>$terendahNovember,
             'terendahDecember'=>$terendahDecember
             ]);
+    }
+    public function export_excel()
+    {
+        return Excel::download(new PengunjungExport, 'Data Pengunjung XploreJogja.xlsx');
     }
     
 }

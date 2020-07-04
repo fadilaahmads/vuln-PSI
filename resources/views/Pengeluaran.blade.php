@@ -91,6 +91,7 @@
 
       <div class="container">
         <h4 class="fitur text-center">Total Pengeluaran perbulan</h4>
+        <a href="/pengeluaran/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
         <div class="chart" id="chartNilai"></div>
       </div>
   

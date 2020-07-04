@@ -91,7 +91,8 @@
 
       <div class="container">
         <h4 class="fitur text-center">Pendapatan Tertinggi Perbulan</h4>
-          <div class="chart" id="chartNilai"></div>
+        <a href="/pendapatan/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
+        <div class="chart" id="chartNilai"></div>
       </div>
   
     <!-- Optional JavaScript -->

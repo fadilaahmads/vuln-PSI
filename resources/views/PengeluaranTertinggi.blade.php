@@ -91,8 +91,7 @@
 
       <div class="container">
         <h4 class="fitur text-center">Pengeluaran</h4>
-          <a href="/pengeluaran" class="btn btn-primary tombol">Tahun</a>
-          <a href="" class="btn btn-primary tombol">Bulan</a>
+        <a href="/pengeluaran/export_excel" class="btn btn-success my-3" target="_blank">EXPORT EXCEL</a>
         <div class="chart" id="chartNilai"></div>
       </div>
   

@@ -5,17 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\DB;
 use App\Pendapatan;
+use App\Exports\PendapatanExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
 
 class PendapatanController extends Controller
-{ 
-    // public function index()
-    // {
-    //    $pendapatan = DB::table('pendapatan')->get();
-    //    $pendapatan=Pendapatan::all();
-    //    return view('index', ['pendapatan' => $pendapatan]);
-    //    return response()->json(["data"=>$pendapatan]);
-    // }
-
+{    
     public function index()
     {
         //total
@@ -145,5 +140,9 @@ class PendapatanController extends Controller
             'terendahNovember'=>$terendahNovember,
             'terendahDecember'=>$terendahDecember
             ]);
+    }
+    public function export_excel()
+    {
+        return Excel::download(new PendapatanExport, 'Data Pendapatan XploreJogja.xlsx');
     }
 }

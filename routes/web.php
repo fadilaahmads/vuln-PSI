@@ -32,19 +32,20 @@ Route::get('/pendapatan', 'PendapatanController@index');
 Route::get('/pendapatan/rata2', 'PendapatanController@rata2');
 Route::get('/pendapatan/tertinggi', 'PendapatanController@tertinggi');
 Route::get('/pendapatan/terendah', 'PendapatanController@terendah');
+Route::get('/pendapatan/export_excel','PendapatanController@export_excel');
 
 //Dibawah Comment Ini Route Tentang Pengeluaran
 Route::get('/pengeluaran', 'PengeluaranController@index');
 Route::get('/pengeluaran/rata2', 'PengeluaranController@rata2');
 Route::get('/pengeluaran/tertinggi', 'PengeluaranController@tertinggi');
 Route::get('/pengeluaran/terendah', 'PengeluaranController@terendah');
- 
-
+Route::get('/pengeluaran/export_excel','PengeluaranController@export_excel');
 
 //Dibawah Comment Ini Route Tentang Pengunjung
 Route::get('/pengunjung', 'PengunjungController@index');
 Route::get('/pengunjung/rata2', 'PengunjungController@rata2');
 Route::get('/pengunjung/tertinggi', 'PengunjungController@tertinggi');
 Route::get('/pengunjung/terendah', 'PengunjungController@terendah');
+Route::get('/pengunjung/export_excel','PengunjungController@export_excel');
 
 

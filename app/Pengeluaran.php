@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengeluaran extends Model
 {
-    protected $tabel = "pengeluaran";
+    protected $table = 'pengeluaran';
+    protected $fillable = ['nama_kegiatan', 'tanggal', 'bulan', 'tahun', 'biaya'];
+    protected $primaryKey = 'id';
 }

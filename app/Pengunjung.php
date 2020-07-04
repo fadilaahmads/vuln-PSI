@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pengunjung extends Model
 {
-    protected $tabel = "pengunjung";
+    protected $table = 'pengunjung';
+    protected $fillable = ['jenis', 'jumlah','bulan','tahun'];
+    protected $primaryKey = 'id';
+   
 }
+
