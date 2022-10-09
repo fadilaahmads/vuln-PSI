@@ -1137,6 +1137,7 @@
         },
         {
             "name": "league/flysystem",
+dependabot/composer/laravel/framework-7.30.6
             "version": "1.1.9",
             "source": {
                 "type": "git",
@@ -1146,7 +1147,8 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/094defdb4a7001845300334e7c1ee2335925ef99",
-                "reference": "094defdb4a7001845300334e7c1ee2335925ef99",
+                "reference": "094defdb4a7001845300334e7c1ee2335925ef99",        
+master
                 "shasum": ""
             },
             "require": {
@@ -1219,7 +1221,9 @@
             ],
             "support": {
                 "issues": "https://github.com/thephpleague/flysystem/issues",
+dependabot/composer/laravel/framework-7.30.6
                 "source": "https://github.com/thephpleague/flysystem/tree/1.1.9"
+master
             },
             "funding": [
                 {
@@ -1227,6 +1231,7 @@
                     "type": "other"
                 }
             ],
+dependabot/composer/laravel/framework-7.30.6
             "time": "2021-12-09T09:40:50+00:00"
         },
         {
@@ -1241,6 +1246,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/aa70e813a6ad3d1558fc927863d47309b4c23e69",
                 "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69",
+master
                 "shasum": ""
             },
             "require": {
@@ -1271,7 +1277,9 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
+dependabot/composer/laravel/framework-7.30.6
                 "source": "https://github.com/thephpleague/mime-type-detection/tree/1.9.0"
+master
             },
             "funding": [
                 {
@@ -1283,7 +1291,10 @@
                     "type": "tidelift"
                 }
             ],
+dependabot/composer/laravel/framework-7.30.6
             "time": "2021-11-21T11:48:40+00:00"
+            "time": "2021-09-25T08:23:19+00:00"
+master
         },
         {
             "name": "maatwebsite/excel",
@@ -3242,7 +3253,9 @@
                     "type": "tidelift"
                 }
             ],
+dependabot/composer/laravel/framework-7.30.6
             "time": "2021-12-15T11:06:13+00:00"
+master
         },
         {
             "name": "symfony/http-foundation",
@@ -4241,6 +4254,7 @@
                 }
             ],
             "time": "2021-09-13T13:58:33+00:00"
+dependabot/composer/laravel/framework-7.30.6
         },
         {
             "name": "symfony/polyfill-php81",
@@ -4320,6 +4334,7 @@
                 }
             ],
             "time": "2021-09-13T13:58:11+00:00"
+master
         },
         {
             "name": "symfony/process",
@@ -7135,5 +7150,7 @@
         "php": "^7.2.5"
     },
     "platform-dev": [],
+dependabot/composer/laravel/framework-7.30.6
     "plugin-api-version": "2.2.0"
+master
 }
